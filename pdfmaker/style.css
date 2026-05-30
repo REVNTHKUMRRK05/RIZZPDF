@@ -1,0 +1,143 @@
+/* Page Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Title */
+h1 {
+    font-size: 42px;
+    color: cyan;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Subtitle */
+p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* File Input */
+input[type="file"] {
+    margin: 20px 0;
+    padding: 10px;
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Preview Grid (FIXED SPACING) */
+#preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 8px;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 700px;
+}
+
+/* Preview Images */
+.preview-img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #333;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.preview-img:hover {
+    transform: scale(1.05);
+    border-color: cyan;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background: cyan;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+/* Button Hover */
+button:hover {
+    background: #00ffff;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    #preview {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: cyan;
+    color: black;
+}
+#dropArea {
+    border: 3px dashed cyan;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 700px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#dropArea:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+#dropArea.dragover {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: #00ffff;
+}
+
+#dropArea h3 {
+    margin: 0;
+}
+
+#dropArea p {
+    margin-top: 10px;
+    color: #aaa;
+}
